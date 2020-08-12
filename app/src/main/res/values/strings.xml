@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Whatsapp Cleaner</string>
+    <string name="error_missing_permissions">Cannot start without required permissions</string>
+
+    <string name="codename">Your codename: %s</string>
+    <string name="opponent_name">Opponent: %s</string>
+    <string name="no_opponent">none (yet)</string>
+
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_searching">Searching</string>
+    <string name="status_connected">Connected</string>
+
+    <string name="game_choice">You chose %s</string>
+
+    <string name="win_message">%1$s beats %2$s!</string>
+    <string name="tie_message">You both chose %s</string>
+    <string name="loss_message">%1$s loses to %2$s…</string>
+
+    <string name="action_find_opponents">Find opponent</string>
+    <string name="action_disconnect">Disconnect</string>
+
+    <string name="choice_rock">Rock</string>
+    <string name="choice_paper">Paper</string>
+    <string name="choice_scissors">Scissors</string>
+
+    <string name="game_score">%1$d : %2$d</string>
+
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <string name="ok">ok</string>
+    <string name="storage_access_required">Allow to read Storage</string>
+    <string name="camera_permission_not_available">storage access permission not available</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <!--  <string name="tab_text_1">Sent Images</string>
+<string name="tab_text_2">Received Images</string>-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_videos">VideosActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>

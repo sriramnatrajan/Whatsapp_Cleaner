@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:layout_margin="10dp"
+    app:layoutDescription="@xml/sample_collapsing_animation_scene">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/images_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Images"
+                android:textAlignment="textStart"
+                android:textColor="@color/md_grey_700"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/images_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="0B"
+                android:textAlignment="textStart"
+                android:textColor="@color/md_grey_700"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@+id/images_rcview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/images_rcview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/images_size"
+                app:spanCount="5"
+                tools:itemCount="5"
+                tools:listitem="@layout/simple_image_adapter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/document_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_item_card" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/documents_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Documents"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/md_grey_700"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/folder_iv"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+
+                    android:id="@+id/documents_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="0B"
+                    android:textAlignment="textStart"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/md_grey_700"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/documents_tv"
+                    android:gravity="start"
+                    android:layout_marginLeft="16dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/folder_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_documents"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/videos_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/document_item_card" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/videos_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Videos"
+                android:textAlignment="textStart"
+                android:textColor="@color/md_grey_700"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/videos_iv"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/video_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:text="0B"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/md_grey_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/videos_tv" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/videos_iv"
+                android:layout_width="50dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_video"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="459dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videos_item_card">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="457dp"
+            android:id="@+id/recyclerview_files_types"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/audio_file_adapter"
+            app:spanCount="2"
+            tools:itemCount="4"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
